@@ -30,6 +30,7 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
+  int correctAnswerCount = 0;
 
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer = quizBrain.getCorrectAnswer();
@@ -38,12 +39,12 @@ class _QuizPageState extends State<QuizPage> {
       if (quizBrain.isFinished() == true) {
         Alert(
           context: context,
-          title: "Finished!",
-          desc: "You have finished the quizz.",
+          title: "Terminaste!",
+          desc: "completaste el quizz con $correctAnswerCount respuestas correctas.",
           buttons: [
             DialogButton(
               child: Text(
-                'Retry',
+                'Reintentar',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
@@ -53,10 +54,12 @@ class _QuizPageState extends State<QuizPage> {
             )
           ],
         ).show();
+        correctAnswerCount = 0;
         quizBrain.reset();
         scoreKeeper.clear();
       } else {
         if (userPickedAnswer == correctAnswer) {
+          correctAnswerCount++;
           scoreKeeper.add(Icon(
             Icons.check,
             color: Colors.green,
@@ -101,7 +104,7 @@ class _QuizPageState extends State<QuizPage> {
               textColor: Colors.white,
               color: Colors.green,
               child: Text(
-                'True',
+                'Verdadero',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
@@ -120,7 +123,7 @@ class _QuizPageState extends State<QuizPage> {
             child: FlatButton(
               color: Colors.red,
               child: Text(
-                'False',
+                'Falso',
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,

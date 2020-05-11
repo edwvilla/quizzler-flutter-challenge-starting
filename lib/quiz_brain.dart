@@ -4,31 +4,19 @@ class QuizBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
-    Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
-        false),
-    Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-        true),
-    Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-        false),
-    Question(
-        'The total surface area of two human lungs is approximately 70 square metres.',
-        true),
-    Question('Google was originally called \"Backrub\".', true),
-    Question(
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
-        true),
-    Question(
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
-        true),
+    Question('Cerca de un 20 % de la población mundial es musulmana.', true),
+    Question('El cerebro es el órgano más pesado del cuerpo humano.', false),
+    Question('Más del 50 % de la mortalidad infantil se debe al problema del hambre mundial.', true),
+    Question('La phobofobia es la fobia a la filosofía.', false),
+    Question('La longitud del Río Nilo es de 6650 kilómetros.', true),
+    Question('Es ilegal orinar en el oceano de Portugal.', true),
+    Question('La entomología es la ciencia que estudia el desarrollo de los organismos unicelulares.', false),
+    Question('Los animales de la especie Homo sapiens son plantígrados.', true),
+    Question('La Universidad de Cambridge se fundó antes que el Machu Picchu.', true),
+    Question('La superficie de Chile es mayor que la de Francia.', true),
+    Question('Google originalmente se llamaba \"Backrub\".', true),
+    Question('Gran Bretaña y Reino Unido son lo mismo.', false),
+    Question('En West Virginia, USA, si accidentalmente golpeas un animal en tu auto, eres libre de llevarlo a casa para cenar.', true),
   ];
 
   void nextQuestion() {
